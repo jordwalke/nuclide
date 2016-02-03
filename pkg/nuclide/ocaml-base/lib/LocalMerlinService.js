@@ -48,3 +48,8 @@ export async function complete(
   const instance = await getInstance(path);
   return instance ? instance.complete(path, line, col, prefix) : null;
 }
+
+export async function getInstanceForPath(path: NuclideUri): Promise<?any> {
+  return await getInstance(path);
+}
+
